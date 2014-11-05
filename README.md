@@ -27,11 +27,56 @@ Put the new files in a folder to get a result like this:
 
 You're now ready to run the nginx-registry-proxy Server ;)
 
-    docker run -d -p 80:80 \
+    docker run -d -p 443:80 \
     -v $PATH\_TO\_YOUR/external:/etc/nginx/external \
     --link registry:registry --name nginx-registry-proxy \
     marvambass/nginx-registry-proxy
 
+## Use your private Docker Registry
+
+Let's asume, you followed all steps until now. You've a Server (_https://mydockerreg.com:443_) with _https_ on port _443_ and a basicauth user named _tom_ with the password _jerry_.
+
+Let's check if the Server is available by opening this URL _https://mydockerreg.com:443/v1/\_ping_. If the Server returns _true_ your Registry is up and running.
+
+Let's get a new Docker Image from the offical Registry, rename it, and publish it into your private Registry.
+
+    $ docker pull scratch # this pulls the scratch image from the offical registry
+
+Now we have the image named _scratch_ in our local Docker Image Registry. You can check that with the command:
+
+    $ docker images
+    scratch              latest              511136ea3c5a        16 months ago       0 B
+
+Let's rename the Image and publish it into your private Registry
+
+    $ docker tag scratch mydockerreg.com:443/scratch
+
+Now the command _docker images_ will show another Image
+
+    scratch              latest              511136ea3c5a        16 months ago       0 B
+    mydockerreg.com:443/scratch             latest              511136ea3c5a        16 months ago       0 B
+
+At this Point we're able to publish it into your private Registry but first we need to login into the server
+
+    $ docker login https://mydockerreg.com:443
+    Username: tom
+    Password: jerry
+    Email: 
+    $ docker push mydockerreg.com:443/scratch
+
+You're successfully published you're first Image into your private Registry.
+__Note__ that you need _docker login_ on every Server (you can also use arguments for password and username, but this is not secure because of the process list of linux _ps aux_)
+
+Download the uploaded Image:
+
+    $ docker login https://mydockerreg.com:443
+    Username: tom
+    Password: jerry
+    Email: 
+    $ docker pull mydockerreg.com:443/scratch
+    
+That's it - Have fun!
+    
 ## Based on
 
 This Dockerfile bases on the [/\_/nginx/](https://registry.hub.docker.com/_/nginx/) Official Image.
