@@ -31,7 +31,8 @@ docker run -d -p 80:80 -v $PATH\_TO\_YOUR/external:/etc/nginx/external --link re
 
 This Dockerfile bases on the [/\_/nginx/](https://registry.hub.docker.com/_/nginx/) Official Image.
 
-I got inspired by the following DigitalOcean Tutorial https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
+I got inspired by the following DigitalOcean Tutorial [https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
+](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04)
 
 ## Building the Dockerfile yourself
 
