@@ -5,6 +5,8 @@ _maintained by MarvAmBass_
 
 This Dockerfile (available as ___marvambass/nginx-registry-proxy___) gives you a nginx reverse proxy with SSL and Basic Auth to use with your Docker Registry (___registry___)
 
+View in Docker Registry [marvambass/nginx-registry-proxy](https://registry.hub.docker.com/u/marvambass/nginx-registry-proxy/)
+
 ## Running marvambass/nginx-registry-proxy Container 
 
 To run this container, you need a running ___registry___ with the name _registry_ for example:
