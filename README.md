@@ -88,8 +88,8 @@ I got inspired by the following DigitalOcean Tutorial [https://www.digitalocean.
 
 Just use the following command to build and publish your/this Docker Container.
 
-  docker build -t username/nginx-registry-proxy .
-  docker push username/nginx-registry-proxy
+    docker build -t username/nginx-registry-proxy .
+    docker push username/nginx-registry-proxy
 
 ## Cheat Sheet
 
