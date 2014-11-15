@@ -15,7 +15,6 @@ To run this container, you need a running ___registry___ with the name _registry
     -v $YOUR_REGISTRY_DIR:/registry \
     -e "SETTINGS_FLAVOR=local" \
     -e "STORAGE_PATH=/registry" \
-    -e "SEARCH_BACKEND=sqlalchemy" \
     registry
 
 You also need a htpasswd-file [howto](#creating-a-htpasswd-file) and a ssl keypair [howto](#creating-a-self-signed-ssl-cert)
