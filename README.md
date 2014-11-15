@@ -27,7 +27,7 @@ Put the new files in a folder to get a result like this:
 
 You're now ready to run the nginx-registry-proxy Server ;)
 
-    docker run -d -p 443:80 \
+    docker run -d -p 443:443 \
     -v $PATH\_TO\_YOUR/external:/etc/nginx/external \
     --link registry:registry --name nginx-registry-proxy \
     marvambass/nginx-registry-proxy
