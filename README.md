@@ -78,7 +78,7 @@ That's it - Have fun!
     
 ## Based on
 
-This Dockerfile bases on the [/\_/nginx/](https://registry.hub.docker.com/_/nginx/) Official Image.
+This Dockerfile bases on the [marvambass/nginx-ssl-secure](https://registry.hub.docker.com/u/marvambass/nginx-ssl-secure) Image.
 
 I got inspired by the following DigitalOcean Tutorial [https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04
 ](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-14-04)
