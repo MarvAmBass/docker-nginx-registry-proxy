@@ -68,7 +68,7 @@ At this Point we're able to publish it into your private Registry but first we n
     $ docker push mydockerreg.com:443/scratch
 
 You're successfully published you're first Image into your private Registry.
-__Note__ that you need _docker login_ on every Server (you can also use arguments for password and username, but this is not secure because of the process list of linux _ps aux_)
+__Note__ that you need _docker login_ on every Server (you can also use arguments for password and username, but this is not secure because of the process list of linux _ps aux_ or the bash history)
 
 Download the uploaded Image:
 
